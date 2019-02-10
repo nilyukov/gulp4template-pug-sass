@@ -1,0 +1,26 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  &-photo {
+    width: 340px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 36px;
+  }
+
+
+  &-name{
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 8px;
+  }
+
+  &-description {
+    font-family: $pt-mono-regular;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}

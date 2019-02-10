@@ -1,0 +1,73 @@
+.contacts {
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 20px;
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+
+    &__item {
+      @include size(48px);
+      border-radius: 50%;
+      background-color: $btn-bg-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__icon {
+      @include size(24px);
+      fill: $white;
+    }
+  }
+
+  &-text {
+    text-align: center;
+    font-family: $pt-mono-regular;
+    margin-bottom: 20px;
+  }
+
+  &-form {
+    padding-top: 20px;
+    & > * {
+      margin: 20px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__line {
+      display: flex;
+      position: relative;
+      & > * {
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+
+input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}

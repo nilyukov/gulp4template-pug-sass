@@ -1,0 +1,86 @@
+.work {
+  padding-top: 80px;
+
+  &-title {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &-link {
+    display: block;
+    text-align: center;
+    font-family: $pt-mono-regular;
+    margin-bottom: 20px;
+  }
+
+  &-carousel {
+    position: relative;
+
+
+    &__inner {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    &__open:checked + .work-carousel__item {
+      position: static;
+      opacity: 100;
+    }
+
+    &__item {
+      position: absolute;
+      opacity: 0;
+      -webkit-transition: opacity 0.6s ease-out;
+      transition: opacity 0.6s ease-out;
+    }
+
+    &__item img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+
+
+    &__text {
+      max-width: 520px;
+      font-family: $pt-sans-regular;
+    }
+
+    &__indicators {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+    }
+
+    &__indicator {
+      padding: 4px;
+    }
+
+
+    &__bullet {
+      @include size(8px);
+      background-color: #71abff;
+      cursor: pointer;
+      display: block;
+      border-radius: 50%
+    }
+
+    &__bullet:hover {
+      color: #aaaaaa;
+    }
+  }
+
+
+}
+
+#carousel-1:checked ~ .control-1 ~ .work-carousel__indicators li:nth-child(1) .work-carousel__bullet,
+#carousel-2:checked ~ .control-2 ~ .work-carousel__indicators li:nth-child(2) .work-carousel__bullet,
+#carousel-3:checked ~ .control-3 ~ .work-carousel__indicators li:nth-child(3) .work-carousel__bullet {
+  background-color: red;
+}

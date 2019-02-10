@@ -1,0 +1,58 @@
+.expectations {
+  &-accordion {
+    width: 100%;
+    padding-top: 8px;
+
+    [type=radio], [type=checkbox] {
+      display: none;
+    }
+
+    &__label {
+      display: block;
+      cursor: pointer;
+      color: #0059D9;
+      padding: 14px 0;
+      font-size: 18px;
+      line-height: 24px;
+      -webkit-transition: all .2s ease-out;
+      -moz-transition: all .2s ease-out;
+      position: relative;
+
+    }
+
+    li label:hover,
+    [type=radio]:checked ~ label,
+    [type=checkbox]:checked ~ label {
+      color: $black;
+      .cross{
+        transform: rotate(135deg);
+        &:before,
+        &:after {
+          border-color: $black;
+        }
+      }
+    }
+
+    &__content {
+      overflow: hidden;
+      height: 0;
+      transition: all .5s ease-out;
+    }
+
+    &__text {
+      font-family: $pt-mono-regular;
+      color: rgba($black, .7);
+      max-width: 520px;
+    }
+
+    &__item {
+      border-top: 1px solid #d2d9e2;
+    }
+  }
+
+
+  .vertical [type=radio]:checked ~ label ~ .expectations-accordion__content, .vertical [type=checkbox]:checked ~ label ~ .expectations-accordion__content {
+    height: 60px;
+  }
+}
+

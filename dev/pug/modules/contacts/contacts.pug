@@ -1,0 +1,28 @@
+section.s-contacts
+    .container
+        .contacts
+            h2.section-title.section-title--center
+                | Контактная информация
+            ul.contacts-list
+                li.contacts-list__item
+                    +icon('facebook','contacts-list__icon')
+                li.contacts-list__item
+                    +icon('twitter','contacts-list__icon')
+                li.contacts-list__item
+                    +icon('telegram','contacts-list__icon')
+            p.contacts-text
+                | Я откурыт для новых проектов. Вы можете прислать мне для оценки примерное техническое задание или просто описание проекта своими словами.
+            form.contacts-form
+                .contacts-form__line
+                    input(type="text" placeholder="Как вас зовут?").input-field
+                    input(type="text" placeholder="Почтовый ящик").input-field
+                .contacts-form__line
+                    textarea(name="textarea" placeholder="Сообщение").textarea-field
+                .contacts-form__line
+                    .file-upload
+                        button.btn.btn--fill.btn--size-s.btn--bg-transparent Прикрепить ТЗ
+                        input(type='file' name='myfile')
+
+                .contacts-form__line
+                    button.btn.btn--fill
+                        | Отправить

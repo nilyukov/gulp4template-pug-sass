@@ -1,21 +1,24 @@
 // Colors
 $white: #ffffff;
 $black: #000000;
+$main-bg-color: #EFF1F2;
+$base-text-color: #000000;
+
+$link-color: #0059D9;
+$link-color-hover: #000000;
+$link-color-focus: rgba($link-color, .7);
+
+$btn-bg-color: #0059D9;
 
 // Sizes
-$base-font-size: 16px;
+$base-font-size: 14px;
+$content-size: 1000px;
 
-$breakpoints: (
-  "phone"       : 400px,
-  "phone-wide"  : 480px,
-  "phablet"     : 560px,
-  "tablet-small": 640px,
-  "tablet"      : 768px,
-  "tablet-wide" : 1024px,
-  "desktop"     : 1248px,
-  "desktop-wide": 1440px
-);
-
-$content-size: 1024px;
+$tablet-size: 1000px;
+$phone-size: 600px;
 
 // Fonts
+
+$montserrat-extra-bold: 'montserrat_extra_bold', Arial, sans-serif;
+$pt-mono-regular: 'pt_mono_regular', Arial, sans-serif;
+$pt-sans-regular: 'pt_sans_regular', Arial, sans-serif;

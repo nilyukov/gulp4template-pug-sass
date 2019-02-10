@@ -1,0 +1,80 @@
+.s {
+  &-bg {
+    &-white{
+      background-color: $white;
+    }
+
+    &-dark {
+      background-color: #25282a;
+      color: $white;
+    }
+  }
+}
+
+.section {
+  &-title{
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 8px;
+    text-align: center;
+
+    &--left {
+      text-align: left;
+    }
+  }
+  &-description {
+    display: block;
+    font-family: $pt-mono-regular;
+    text-align: center;
+  }
+}
+
+
+.input-field, .textarea-field {
+  background-color: $white;
+  border-radius: 4px;
+  border: 1px solid rgba(31,64,111,0.20);
+  box-shadow: none;
+  height: 50px;
+  padding: 6px 12px;
+  width: 100%;
+}
+
+
+
+.cross {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  transition: all linear .3s;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 16px;
+    height: 0;
+    border-top: 2px solid #0059D9;
+    transform-origin: center;
+  }
+  &:before {
+    transform: rotate(90deg);
+  }
+  &:after {
+    transform: rotate(0deg);
+  }
+
+}
+
+
+
+
